@@ -10,11 +10,14 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
-  #map { position:relative; height:600px; width:100%; }
+  #map { position:absolute; top:80px; bottom:0px; width:100%; }
 #inputs,
 #errors,
 #directions {
     position: absolute;
+    width: 33.3333%;
+    max-width: 300px;
+    min-width: 200px;
 }
 #inputs {
     z-index: 10;
@@ -23,7 +26,7 @@
 }
 }
 #errors {
-    z-index: 8;
+    z-index: 8; 
     opacity: 0;
     padding: 10px;
     border-radius: 0 0 3px 3px;
@@ -31,11 +34,16 @@
     top: 90px;
     left: 10px;
 }
+    h1{
+        word-spacing: 10px;
+    }
 </style>
+    
 </head>
 <body>
+    
 	
-    <center><h1>India Map with Hindi Labels</h1></center>
+    <center><h1><font color="orange">भारत</font> <font color="blue">का</font> <font color="green">नक्षा</font></h1></center>
 		
 	
 		<div id='map'></div>
