@@ -7,9 +7,6 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.1.0/mapbox.directions.js'></script>
-<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.1.0/mapbox.directions.css' type='text/css' />
-
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
@@ -22,19 +19,7 @@
     max-width: 300px;
     min-width: 200px;
 }
-#inputs {
-    z-index: 10;
-    top: 80px;
-    left: 30px;
-}
-#directions {
-    z-index: 99;
-    background: rgba(0,0,0,.8);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
-}
+
 #errors {
     z-index: 8;
     opacity: 0;
@@ -48,8 +33,7 @@
 </head>
 <body>
 	
-	<h1>Mysuru city map
-		</h1>
+    <center><h1>India Map with Hindi Labels</h1></center>
 		
 	
 		<div id='map'></div>
@@ -59,42 +43,11 @@
 		  <div id='routes'></div>
 		  <div id='instructions'></div>
 		</div>
-		<h2>Tourist Attractions in Mysuru
-			</h2>
-		<ol>
-		
-		<li><a href="http://ruthmaben.github.io/mysurumap/#15/12.2771/76.6808">Chamundihills</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#17/12.30075/76.66841">Zoo</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#17/12.42076/76.57609">Brindavan Gardens</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#17/12.30491/76.65595">Mysore Palace</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#17/12.30260/76.67528">Karanji Kere</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#16/11.9405/76.2744">Kabini River Lodge</a></li>
-		<li><a href="http://ruthmaben.github.io/mysurumap/#18/12.29817/76.69300">Lalith Mahal Palace Hotel</a></li>
-		 <li><a href="http://ruthmaben.gitHub.io/mysurumap/#19/12.32114/76.65886">St.Philomena's Church</a></li>
-		 <li><a href="http://ruthmaben.github.io/mysurumap/#16/12.4226/76.6865">Srirangapatna</a></li>
-		 
-		</ol>
-		
-		<p>Made by ruthmaben,2015 <a href="https://github.com/ruthmaben/mysurumap">source code</a></li>
-		</p>
 
 <script>
-L.mapbox.accessToken = 'pk.eyJ1IjoicnV0aG1hYmVuIiwiYSI6IlhWR1Y0eDQifQ.Bl13WZHx_8a0JfEntqP_wA';
-var map = L.mapbox.map('map', 'ruthmaben.5a2a70ee');
+L.mapbox.accessToken = 'pk.eyJ1Ijoic3JpdmlkeWEiLCJhIjoicXo2NTJKayJ9.m1P57SCwkp8_7N3TgYsVRg';
+var map = L.mapbox.map('map', 'srividya.5948b25f');
 var hash = L.hash(map); 
-// create the initial directions object, from which the layer
-// and inputs will pull data.
-var directions = L.mapbox.directions();
-var directionsLayer = L.mapbox.directions.layer(directions)
-    .addTo(map);
-var directionsInputControl = L.mapbox.directions.inputControl('inputs', directions)
-    .addTo(map);
-var directionsErrorsControl = L.mapbox.directions.errorsControl('errors', directions)
-    .addTo(map);
-var directionsRoutesControl = L.mapbox.directions.routesControl('routes', directions)
-    .addTo(map);
-var directionsInstructionsControl = L.mapbox.directions.instructionsControl('instructions', directions)
-    .addTo(map);
 </script>
 </body>
 </html>
